@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/bmstu-iu8-34-cpp-2018/lab-04-stack-Avsyankaa.svg?token=Jyxq4yG4zk5pxZ8uC3v2&branch=master)](https://travis-ci.com/bmstu-iu8-34-cpp-2018/lab-04-stack-Avsyankaa)
 # Лабораторная работа №4
 
 ## Задание 1
