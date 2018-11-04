@@ -1,7 +1,7 @@
 # Лабораторная работа №4
 
 ## Задание 1
-Реализовать некопируемый перемещаемый шаблон класса **stack** с методами `pop`, `push`, `head`. 
+Реализовать некопируемый перемещаемый шаблон класса **stack** с методами `pop`, `push`, `head`.
 ```cpp
 template <typename T>
 class stack
@@ -27,7 +27,7 @@ class stack
 public:
   template <typename ... Args>
   void push_emplace(Args&&... value);
-  void push(T&& value);
+  void push(const T& value);
   const T& head() const;
   T pop();
 };
