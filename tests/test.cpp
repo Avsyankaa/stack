@@ -55,55 +55,55 @@ TEST(StackTest, Test5)  {
 }
 
 TEST(Stack1Test, Test6) {
-    stack1<std::pair<int, std::string>> st;
+    stack<std::pair<int, std::string>> st;
     st.push_emplace(4, "hello");
-    std::pair<int, std::string> pair1 = st.get_value(0);
+    std::pair<int, std::string> pair1 = st.get_element(0);
     std::pair<int, std::string> result{4, "hello"};
     EXPECT_EQ(pair1, result);
 }
 
 
 TEST(Stack1Test, Test7) {
-    stack1<std::pair<int, std::string>> st;
-    stack1<std::pair<int, std::string>> st1;
+    stack<std::pair<int, std::string>> st;
+    stack<std::pair<int, std::string>> st1;
     st.push_emplace(4, "hello");
     st.push_emplace(5, "hi");
     st.push_emplace(6, "hoy");
-    st1.push_emplace(st.get_value(0));
+    st1.push_emplace(st.get_element(0));
     std::pair<int, std::string> result{4, "hello"};
-    EXPECT_EQ(result, st1.get_value(0));
+    EXPECT_EQ(result, st1.get_element(0));
 }
 
 TEST(Stack1Test, Test8) {
-    stack1<std::pair<int, std::string>> st;
+    stack<std::pair<int, std::string>> st;
     st.push({4, "hello"});
-    std::pair<int, std::string> pair1 = st.get_value(0);
+    std::pair<int, std::string> pair1 = st.get_element(0);
     std::pair<int, std::string> result{4, "hello"};
     EXPECT_EQ(pair1, result);
 }
 
 TEST(Stack1Test, Test9) {
-    stack1<std::pair<int, std::string>> st;
+    stack<std::pair<int, std::string>> st;
     st.push_emplace(4, "hello");
     st.push_emplace(5, "hi");
     st.push_emplace(6, "hoy");
-    st.push_emplace(st.get_value(0));
+    st.push_emplace(st.get_element(0));
     std::pair<int, std::string> pair = st.head();
     std::pair<int, std::string> result = {4, "hello"};
     EXPECT_EQ(pair, result);
 }
 
 TEST(Stack1Test, Test10) {
-    stack1<std::pair<int, std::string>> st;
+    stack<std::pair<int, std::string>> st;
     st.push_emplace(4, "hello");
     st.push_emplace(5, "hi");
     st.push_emplace(6, "hoy");
-    st.push_emplace(st.get_value(0));
+    st.push_emplace(st.get_element(0));
     std::size_t capacity1 = st.get_capacity();
     st.pop();
     std::size_t capacity2 = st.get_capacity();
     EXPECT_EQ(capacity1-1, capacity2);
-    std::pair<int, std::string> pair = st.get_value(2);
+    std::pair<int, std::string> pair = st.get_element(2);
     std::pair<int, std::string> result = {6, "hoy"};
     EXPECT_EQ(pair, result);
 }
